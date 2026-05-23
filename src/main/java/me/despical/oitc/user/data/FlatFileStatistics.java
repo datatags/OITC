@@ -18,7 +18,7 @@
 
 package me.despical.oitc.user.data;
 
-import me.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.configuration.ConfigUtils;
 import me.despical.oitc.api.StatsStorage;
 import me.despical.oitc.user.User;
 import org.bukkit.configuration.file.FileConfiguration;

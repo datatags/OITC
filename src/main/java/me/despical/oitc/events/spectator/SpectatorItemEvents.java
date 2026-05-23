@@ -18,9 +18,9 @@
 
 package me.despical.oitc.events.spectator;
 
-import me.despical.commons.compat.XMaterial;
-import me.despical.commons.item.ItemUtils;
-import me.despical.commons.number.NumberUtils;
+import dev.despical.commons.XMaterial;
+import dev.despical.commons.item.ItemUtils;
+import dev.despical.commons.number.NumberUtils;
 import me.despical.oitc.Main;
 import me.despical.oitc.arena.Arena;
 import me.despical.oitc.events.EventListener;

@@ -2,7 +2,7 @@ package me.despical.oitc.command;
 
 import me.despical.commandframework.CommandArguments;
 import me.despical.commandframework.annotations.Command;
-import me.despical.commons.string.StringUtils;
+import dev.despical.commons.string.StringUtils;
 import me.despical.oitc.ConfigPreferences;
 import me.despical.oitc.api.StatsStorage;
 import me.despical.oitc.arena.Arena;

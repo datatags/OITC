@@ -18,9 +18,9 @@
 
 package me.despical.oitc.handlers.items;
 
-import me.despical.commons.compat.XMaterial;
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.number.NumberUtils;
+import dev.despical.commons.XMaterial;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.number.NumberUtils;
 import me.despical.oitc.Main;
 import me.despical.oitc.arena.Arena;
 import me.despical.oitc.util.Utils;

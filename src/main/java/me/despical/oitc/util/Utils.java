@@ -1,6 +1,6 @@
 package me.despical.oitc.util;
 
-import me.despical.commons.compat.XMaterial;
+import dev.despical.commons.XMaterial;
 import me.despical.oitc.Main;
 import me.despical.oitc.addons.oraxen.OraxenAddon;
 import org.bukkit.entity.Player;

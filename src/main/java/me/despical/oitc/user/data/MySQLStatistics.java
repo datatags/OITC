@@ -18,8 +18,8 @@
 
 package me.despical.oitc.user.data;
 
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.database.MysqlDatabase;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.database.MySQLDatabase;
 import me.despical.oitc.api.StatsStorage;
 import me.despical.oitc.user.User;
 import org.jetbrains.annotations.NotNull;
@@ -37,11 +37,11 @@ import java.sql.Statement;
 public non-sealed class MySQLStatistics extends AbstractDatabase {
 
 	private final String tableName;
-	private final MysqlDatabase database;
+	private final MySQLDatabase database;
 
 	public MySQLStatistics() {
 		this.tableName = ConfigUtils.getConfig(plugin, "mysql").getString("table", "oitc_stats");
-		this.database = new MysqlDatabase(plugin, "mysql");
+		this.database = new MySQLDatabase(plugin, "mysql");
 
 		plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
 			try (Connection connection = database.getConnection()) {
@@ -131,7 +131,7 @@ public non-sealed class MySQLStatistics extends AbstractDatabase {
 	}
 
 	@NotNull
-	public MysqlDatabase getDatabase() {
+	public MySQLDatabase getDatabase() {
 		return database;
 	}
 }

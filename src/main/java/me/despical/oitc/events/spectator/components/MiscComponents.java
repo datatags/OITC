@@ -18,9 +18,9 @@
 
 package me.despical.oitc.events.spectator.components;
 
-import me.despical.commons.compat.XMaterial;
-import me.despical.commons.item.ItemBuilder;
-import me.despical.commons.miscellaneous.PlayerUtils;
+import dev.despical.commons.XMaterial;
+import dev.despical.commons.item.ItemBuilder;
+import dev.despical.commons.miscellaneous.PlayerUtils;
 import me.despical.inventoryframework.GuiItem;
 import me.despical.inventoryframework.pane.StaticPane;
 import me.despical.oitc.arena.Arena;

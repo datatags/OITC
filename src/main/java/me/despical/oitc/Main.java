@@ -19,10 +19,10 @@
 package me.despical.oitc;
 
 import me.despical.commandframework.CommandFramework;
-import me.despical.commons.scoreboard.ScoreboardLib;
-import me.despical.commons.serializer.InventorySerializer;
-import me.despical.commons.util.Collections;
-import me.despical.commons.util.UpdateChecker;
+import dev.despical.commons.scoreboard.ScoreboardLib;
+import dev.despical.commons.serializer.InventorySerializer;
+import dev.despical.commons.util.Collections;
+import dev.despical.commons.util.UpdateChecker;
 import me.despical.oitc.addons.AddonManager;
 import me.despical.oitc.api.StatsStorage;
 import me.despical.oitc.arena.Arena;

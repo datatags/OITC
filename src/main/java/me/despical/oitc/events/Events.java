@@ -19,13 +19,12 @@
 package me.despical.oitc.events;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.despical.commons.compat.Titles;
-import me.despical.commons.compat.XMaterial;
-import me.despical.commons.miscellaneous.AttributeUtils;
-import me.despical.commons.miscellaneous.PlayerUtils;
-import me.despical.commons.reflection.XReflection;
-import me.despical.commons.serializer.InventorySerializer;
-import me.despical.commons.util.Collections;
+import dev.despical.commons.XMaterial;
+import dev.despical.commons.miscellaneous.AttributeUtils;
+import dev.despical.commons.miscellaneous.PlayerUtils;
+import dev.despical.commons.reflection.XReflection;
+import dev.despical.commons.serializer.InventorySerializer;
+import dev.despical.commons.util.Collections;
 import me.despical.oitc.ConfigPreferences;
 import me.despical.oitc.Main;
 import me.despical.oitc.api.StatsStorage;
@@ -345,7 +344,7 @@ public class Events extends EventListener {
 			plugin.getServer().getScheduler().runTaskLater(plugin, () -> Utils.addPotionEffect(player, PotionEffectType.INVISIBILITY, invisibilityDuration, 0), 1);
 		}
 
-		Titles.sendTitle(player, 10, 40, 10, "", chatManager.message("in_game.messages.death_subtitle"));
+		player.sendTitle("", chatManager.message("in_game.messages.death_subtitle"), 10, 40, 10);
 
 		plugin.getGameItemManager().giveKit(player, arena);
 	}
@@ -487,7 +486,7 @@ public class Events extends EventListener {
 	}
 
 	private void registerLegacyEvents() {
-		registerIf(XReflection.supports(9, 2), new Listener() {
+		registerIf(XReflection.supports(1, 9, 2), new Listener() {
 
 			@EventHandler
 			public void onItemSwap(PlayerSwapHandItemsEvent event) {
@@ -497,7 +496,7 @@ public class Events extends EventListener {
 			}
 		});
 
-		registerIf(XReflection.supports(9), new Listener() {
+		registerIf(XReflection.supports(1, 9, 0), new Listener() {
 
 			@EventHandler
 			public void onArrowPickup(PlayerPickupArrowEvent event) {

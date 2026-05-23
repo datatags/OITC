@@ -18,8 +18,8 @@
 
 package me.despical.oitc.arena;
 
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.serializer.LocationSerializer;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.serializer.LocationSerializer;
 import me.despical.oitc.Main;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;

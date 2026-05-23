@@ -18,8 +18,8 @@
 
 package me.despical.oitc.api;
 
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.sorter.SortUtils;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.sorter.SortUtils;
 import me.despical.oitc.Main;
 import me.despical.oitc.user.User;
 import me.despical.oitc.user.data.MySQLStatistics;

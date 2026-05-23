@@ -18,9 +18,8 @@
 
 package me.despical.oitc.user;
 
-import me.despical.commons.compat.Titles;
-import me.despical.commons.miscellaneous.AttributeUtils;
-import me.despical.commons.reflection.XReflection;
+import dev.despical.commons.miscellaneous.AttributeUtils;
+import dev.despical.commons.reflection.XReflection;
 import me.despical.oitc.ConfigPreferences;
 import me.despical.oitc.Main;
 import me.despical.oitc.api.StatsStorage;
@@ -85,7 +84,7 @@ public class User {
 	public boolean isSpectator() {
 		return spectator;
 	}
-	
+
 	public void setSpectator(boolean spectating) {
 		spectator = spectating;
 	}
@@ -93,7 +92,7 @@ public class User {
 	public int getStat(StatsStorage.StatisticType statisticType) {
 		return stats.computeIfAbsent(statisticType, stat -> 0);
 	}
-	
+
 	public void setStat(StatsStorage.StatisticType stat, int value) {
 		stats.put(stat, value);
 
@@ -151,11 +150,11 @@ public class User {
 	}
 
 	public void sendTitle(String title, String subTitle) {
-		Titles.sendTitle(this.getPlayer(), 10, 40, 10, title, subTitle);
+		getPlayer().sendTitle(title, subTitle, 10, 40, 10);
 	}
 
 	public void updateAttackCooldown() {
-		if (!XReflection.supports(9)) return;
+		if (!XReflection.supports(1, 9, 0)) return;
 
 		Player player = this.getPlayer();
 
@@ -169,7 +168,7 @@ public class User {
 	}
 
 	public void resetAttackCooldown() {
-		if (!XReflection.supports(9)) return;
+		if (!XReflection.supports(1, 9, 0)) return;
 
 		Player player = this.getPlayer();
 

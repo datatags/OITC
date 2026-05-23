@@ -4,11 +4,11 @@ import me.despical.commandframework.CommandArguments;
 import me.despical.commandframework.CommandFramework;
 import me.despical.commandframework.annotations.Command;
 import me.despical.commandframework.annotations.Completer;
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.miscellaneous.MiscUtils;
-import me.despical.commons.serializer.LocationSerializer;
-import me.despical.commons.string.StringMatcher;
-import me.despical.commons.util.Strings;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.miscellaneous.MiscUtils;
+import dev.despical.commons.serializer.LocationSerializer;
+import dev.despical.commons.string.StringMatcher;
+import dev.despical.commons.util.Strings;
 import me.despical.oitc.arena.Arena;
 import me.despical.oitc.arena.ArenaManager;
 import me.despical.oitc.arena.ArenaState;
@@ -59,7 +59,7 @@ public class AdminCommands extends AbstractCommandHandler {
 		List<StringMatcher.Match> matches = StringMatcher.match(arg, commands);
 
 		if (!matches.isEmpty()) {
-			Optional<Command> optionalMatch = commandFramework.getSubCommands().stream().filter(cmd -> cmd.name().equals(label + "." + matches.get(0).getMatch())).findFirst();
+			Optional<Command> optionalMatch = commandFramework.getSubCommands().stream().filter(cmd -> cmd.name().equals(label + "." + matches.get(0).match())).findFirst();
 
 			if (optionalMatch.isPresent()) {
 				String matchedName = getMatchingParts(optionalMatch.get().name(), label + "." + String.join(".", arguments.getArguments()));

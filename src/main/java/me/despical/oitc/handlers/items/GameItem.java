@@ -18,7 +18,7 @@
 
 package me.despical.oitc.handlers.items;
 
-import me.despical.commons.item.ItemBuilder;
+import dev.despical.commons.item.ItemBuilder;
 import me.despical.oitc.util.Utils;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.block.Action;
@@ -47,9 +47,12 @@ public class GameItem {
 		this.itemStack = new ItemBuilder(Utils.getItem(material))
 			.name(displayName)
 			.lore(lore)
-			.unbreakable(true)
+//			.unbreakable(true) // broken currently on 26.1.2
 			.flag(ItemFlag.values())
 			.build();
+		ItemMeta meta = this.itemStack.getItemMeta();
+		meta.setUnbreakable(true);
+		this.itemStack.setItemMeta(meta);
 		this.slot = slot;
 		this.actions = actions.stream().map(Action::valueOf).collect(Collectors.toList());
 	}
@@ -58,12 +61,15 @@ public class GameItem {
 		ItemBuilder builder = new ItemBuilder(Utils.getItem(material))
 			.name(displayName)
 			.lore(lore)
-			.unbreakable(true)
+//			.unbreakable(true) // broken currently on 26.1.2
 			.flag(ItemFlag.values());
 
 		enchants.forEach(builder::enchantment);
 
 		this.itemStack = builder.build();
+		ItemMeta meta = this.itemStack.getItemMeta();
+		meta.setUnbreakable(true);
+		this.itemStack.setItemMeta(meta);
 		this.slot = slot;
 		this.actions = new ArrayList<>();
 	}

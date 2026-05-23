@@ -19,10 +19,10 @@
 package me.despical.oitc.handlers;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.string.StringFormatUtils;
-import me.despical.commons.string.StringUtils;
-import me.despical.commons.util.Strings;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.string.StringFormatUtils;
+import dev.despical.commons.string.StringUtils;
+import dev.despical.commons.util.Strings;
 import me.despical.oitc.Main;
 import me.despical.oitc.arena.Arena;
 import me.despical.oitc.user.User;
@@ -68,7 +68,7 @@ public class ChatManager {
 	}
 
 	public String message(String path) {
-		path = me.despical.commons.string.StringUtils.capitalize(path.replace('_', '-'), '-', '.');
+		path = dev.despical.commons.string.StringUtils.capitalize(path.replace('_', '-'), '-', '.');
 		return coloredRawMessage(config.getString(path));
 	}
 
@@ -171,7 +171,7 @@ public class ChatManager {
 	}
 
 	public List<String> getStringList(String path) {
-		path = me.despical.commons.string.StringUtils.capitalize(path.replace('_', '-'), '-', '.');
+		path = dev.despical.commons.string.StringUtils.capitalize(path.replace('_', '-'), '-', '.');
 		return config.getStringList(path);
 	}
 

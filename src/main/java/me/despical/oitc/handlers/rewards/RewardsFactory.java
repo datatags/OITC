@@ -18,8 +18,8 @@
 
 package me.despical.oitc.handlers.rewards;
 
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.engine.ScriptEngine;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.engine.ScriptEngine;
 import me.despical.oitc.Main;
 import me.despical.oitc.arena.Arena;
 import me.despical.oitc.user.User;

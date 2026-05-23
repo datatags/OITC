@@ -19,7 +19,7 @@
 package me.despical.oitc.handlers;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
-import me.despical.commons.string.StringFormatUtils;
+import dev.despical.commons.string.StringFormatUtils;
 import me.despical.oitc.Main;
 import me.despical.oitc.arena.Arena;
 import me.despical.oitc.user.User;

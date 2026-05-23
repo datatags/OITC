@@ -19,9 +19,9 @@
 package me.despical.oitc.arena;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.despical.commons.miscellaneous.MiscUtils;
-import me.despical.commons.miscellaneous.PlayerUtils;
-import me.despical.commons.serializer.InventorySerializer;
+import dev.despical.commons.miscellaneous.MiscUtils;
+import dev.despical.commons.miscellaneous.PlayerUtils;
+import dev.despical.commons.serializer.InventorySerializer;
 import me.despical.oitc.ConfigPreferences;
 import me.despical.oitc.Main;
 import me.despical.oitc.api.StatsStorage;

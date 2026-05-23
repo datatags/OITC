@@ -1,7 +1,7 @@
 package me.despical.oitc.handlers.language;
 
-import me.despical.commons.file.FileUtils;
-import me.despical.commons.util.Collections;
+import dev.despical.commons.file.FileUtils;
+import dev.despical.commons.util.Collections;
 import me.despical.oitc.Main;
 
 import java.io.File;

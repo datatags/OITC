@@ -1,11 +1,11 @@
 package me.despical.oitc.menu.setup.components;
 
-import me.despical.commons.compat.XMaterial;
-import me.despical.commons.configuration.ConfigUtils;
-import me.despical.commons.item.ItemBuilder;
-import me.despical.commons.serializer.LocationSerializer;
-import me.despical.commons.util.Strings;
-import me.despical.commons.util.conversation.ConversationBuilder;
+import dev.despical.commons.XMaterial;
+import dev.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.item.ItemBuilder;
+import dev.despical.commons.serializer.LocationSerializer;
+import dev.despical.commons.util.Strings;
+import dev.despical.commons.util.conversation.ConversationBuilder;
 import me.despical.inventoryframework.GuiItem;
 import me.despical.inventoryframework.pane.PaginatedPane;
 import me.despical.inventoryframework.pane.StaticPane;

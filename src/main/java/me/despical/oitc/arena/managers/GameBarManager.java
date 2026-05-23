@@ -1,6 +1,6 @@
 package me.despical.oitc.arena.managers;
 
-import me.despical.commons.reflection.XReflection;
+import dev.despical.commons.reflection.XReflection;
 import me.despical.oitc.ConfigPreferences;
 import me.despical.oitc.Main;
 import me.despical.oitc.arena.Arena;
@@ -28,7 +28,7 @@ public final class GameBarManager {
 	public GameBarManager(final Arena arena, final Main plugin) {
 		this.arena = arena;
 		this.plugin = plugin;
-		this.enabled = XReflection.supports(9) && plugin.getOption(ConfigPreferences.Option.GAME_BAR_ENABLED);
+		this.enabled = XReflection.supports(1, 9, 0) && plugin.getOption(ConfigPreferences.Option.GAME_BAR_ENABLED);
 
 		if (enabled) {
 			this.gameBar = plugin.getServer().createBossBar("", BarColor.BLUE, BarStyle.SOLID);

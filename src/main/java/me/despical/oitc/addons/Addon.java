@@ -1,6 +1,6 @@
 package me.despical.oitc.addons;
 
-import me.despical.commons.configuration.ConfigUtils;
+import dev.despical.commons.configuration.ConfigUtils;
 import me.despical.oitc.Main;
 import me.despical.oitc.events.EventListener;
 import org.bukkit.configuration.file.FileConfiguration;

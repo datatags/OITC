@@ -19,12 +19,12 @@
 package me.despical.oitc.arena.managers;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.despical.commons.scoreboard.ScoreboardLib;
-import me.despical.commons.scoreboard.common.EntryBuilder;
-import me.despical.commons.scoreboard.type.Entry;
-import me.despical.commons.scoreboard.type.Scoreboard;
-import me.despical.commons.scoreboard.type.ScoreboardHandler;
-import me.despical.commons.string.StringFormatUtils;
+import dev.despical.commons.scoreboard.ScoreboardLib;
+import dev.despical.commons.scoreboard.common.EntryBuilder;
+import dev.despical.commons.scoreboard.common.Entry;
+import dev.despical.commons.scoreboard.Scoreboard;
+import dev.despical.commons.scoreboard.ScoreboardHandler;
+import dev.despical.commons.string.StringFormatUtils;
 import me.despical.oitc.ConfigPreferences;
 import me.despical.oitc.Main;
 import me.despical.oitc.api.StatsStorage;
@@ -32,6 +32,9 @@ import me.despical.oitc.arena.Arena;
 import me.despical.oitc.arena.ArenaState;
 import me.despical.oitc.handlers.ChatManager;
 import me.despical.oitc.user.User;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -65,8 +68,8 @@ public class ScoreboardManager {
 		Scoreboard scoreboard = ScoreboardLib.createScoreboard(player).setHandler(new ScoreboardHandler() {
 
 			@Override
-			public String getTitle(Player player) {
-				return chatManager.message("Scoreboard.Title");
+			public Component getTitle(Player player) {
+				return LegacyComponentSerializer.legacySection().deserialize(chatManager.message("Scoreboard.Title"));
 			}
 
 			@Override
